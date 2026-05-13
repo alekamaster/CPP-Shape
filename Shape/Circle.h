@@ -9,20 +9,18 @@ class Circle : public Shape
 {
 private:
 
-	float m_radius = 1;
+	float m_radius;
 
 public:
 
-	Circle() { }
-	Circle(float radius) { SetRadius(radius); }
-	virtual ~Circle() { }
+	Circle(const float radius);
 
-	// Accessor
-	virtual float GetRadius() { return m_radius; }
+	
 
-	// Mutator
+	void SetRadius(const float radius);
+	float GetRadius() const;
 
-	// Define additional methods here:
-
+	float GetArea() const override;
+	float GetPerimeter() const override;
 
 };
